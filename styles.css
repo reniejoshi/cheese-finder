@@ -58,3 +58,54 @@ button {
 .buttonNine {
     background: rgb(130, 130, 130);
 }
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(0.2em);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.modal-p {
+    font-size: 20px;
+}
+
+.modal-btn {
+    color: #555;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    padding: 10px 24px;
+    border-radius: 8px;
+    border: 2px solid #555;
+    background-color: #fefefe;
+}
+
+.modal-btn:hover {
+    color: #fefefe;
+    background-color: #555;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover {
+    color: black;
+    cursor: pointer;
+}
