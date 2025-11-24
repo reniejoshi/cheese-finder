@@ -1,0 +1,60 @@
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20;
+}
+
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+}  
+
+button {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    min-width: 3em;
+    min-height: 3em;
+}
+
+.upButton {
+    background: lightblue;
+}
+
+.cheeseButton {
+    background: yellow;
+}
+
+.buttonOne {
+    background: lightgray;
+}
+
+.buttonTwo {
+    background: rgb(200, 200, 200);
+}
+
+.buttonThree {
+    background: rgb(190, 190, 190);
+}
+
+.buttonFour {
+    background: rgb(180, 180, 180);
+}
+
+.buttonFive {
+    background: rgb(170, 170, 170);
+}
+
+.buttonSix {
+    background: rgb(160, 160, 160);
+}
+
+.buttonSeven {
+    background: rgb(150, 150, 150);
+}
+
+.buttonEight {
+    background: rgb(140, 140, 140);
+}
+
+.buttonNine {
+    background: rgb(130, 130, 130);
+}
