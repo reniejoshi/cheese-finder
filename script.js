@@ -1,15 +1,23 @@
+const container = document.getElementById('buttonPar');
+const timerElement = document.getElementById('timer');
+const tryCountElement = document.getElementById('tryCount');
 const modal = document.getElementById("modal");
 const modalP = document.getElementById("modal-p");
 const closeBtn = document.querySelector(".close");
+const restartBtn = document.getElementById("modal-btn");
 
-const timer = setInterval(tick, 1000);
+const width = 10;
+const height = 10;
+
+let timer;
 let cheeseX, cheeseY;
 let tryCount = 0;
 let initalTime = 20;
 let time = initalTime;
 
 function playGame(width, height) {
-    let container = document.getElementById('buttonPar');
+    timerElement.textContent = "Time: " + time;
+    tryCountElement.textContent = "Try: " + tryCount;
 
     for (let y = 0; y < height; y++) {
         for (let x = 0; x < width; x++) {
@@ -27,6 +35,8 @@ function playGame(width, height) {
 
     cheeseX = getRandom(0, width);
     cheeseY = getRandom(0, height);
+
+    timer = setInterval(tick, 1000);
 }
 
 function getRandom(min, max) {
@@ -42,7 +52,7 @@ function buttonClickedHandler(event) {
     if (x == cheeseX && y == cheeseY) {
         button.className = "cheeseButton";
         stopGame();
-        modalP.textContent = `Well done! You found the cheese in ${tryCount} tries and ${initalTime - time} seconds. Reload the page to play again.`;
+        modalP.textContent = `Well done! You found the cheese in ${tryCount} tries and ${initalTime - time} seconds.`;
         displayModal();
     }
     else {
@@ -80,14 +90,12 @@ function buttonClickedHandler(event) {
                 break;
         }
         tryCount++;
-        const tryCountElement = document.getElementById('tryCount');
         tryCountElement.textContent = "Try: " + tryCount;
     }
 }
 
 function tick() {
     time -= 1;
-    const timerElement = document.getElementById('timer');
     timerElement.textContent = "Time: " + time;
     if (time === 0) {
         stopGame();
@@ -105,6 +113,7 @@ function stopGame() {
 }
 
 function displayModal() {
+    restartBtn.disabled = false;
     modal.style.display = "block";
 }
 
@@ -112,4 +121,14 @@ function closeModal() {
     modal.style.display = "none";
 }
 
+function restart() {
+    tryCount = 0;
+    time = initalTime;
+    container.innerHTML = '';
+    closeModal();
+    clearInterval(timer);
+    playGame(width, height);
+}
+
 closeBtn.addEventListener('click', closeModal);
+restartBtn.addEventListener('click', restart);
