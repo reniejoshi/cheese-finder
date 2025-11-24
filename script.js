@@ -1,3 +1,7 @@
+const modal = document.getElementById("modal");
+const modalP = document.getElementById("modal-p");
+const closeBtn = document.querySelector(".close");
+
 const timer = setInterval(tick, 1000);
 let cheeseX, cheeseY;
 let tryCount = 0;
@@ -97,3 +101,14 @@ function stopGame() {
         buttonsList[i].disabled = true;
     }
 }
+
+function displayModal() {
+    modalP.textContent = "Hello world!";
+    modal.style.display = "block";
+}
+
+function closeModal() {
+    modal.style.display = "none";
+}
+
+closeBtn.addEventListener('click', closeModal);
