@@ -42,7 +42,8 @@ function buttonClickedHandler(event) {
     if (x == cheeseX && y == cheeseY) {
         button.className = "cheeseButton";
         stopGame();
-        alert(`Well done! You found the cheese in ${tryCount} tries and ${initalTime - time} seconds. Reload the page to play again.`);
+        modalP.textContent = `Well done! You found the cheese in ${tryCount} tries and ${initalTime - time} seconds. Reload the page to play again.`;
+        displayModal();
     }
     else {
         let dx = x - cheeseX;
@@ -90,7 +91,8 @@ function tick() {
     timerElement.textContent = "Time: " + time;
     if (time === 0) {
         stopGame();
-        alert("Time up! Better luck next time");
+        modalP.textContent = "Time up! Better luck next time";
+        displayModal();
     }
 }
 
@@ -103,7 +105,6 @@ function stopGame() {
 }
 
 function displayModal() {
-    modalP.textContent = "Hello world!";
     modal.style.display = "block";
 }
 
