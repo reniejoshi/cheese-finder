@@ -8,54 +8,69 @@ p {
     font-family: Arial, Helvetica, sans-serif;
 }  
 
-button {
+button,
+button:disabled {
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
     min-width: 3em;
     min-height: 3em;
+    color: black;
+    border: 2px solid black;
+    opacity: 1;
 }
 
-.upButton {
+.upButton,
+.upButton:disabled {
     background: lightblue;
 }
 
-.cheeseButton {
+.cheeseButton,
+.cheeseButton:disabled {
     background: yellow;
 }
 
-.buttonOne {
+.buttonOne,
+.buttonOne:disabled {
     background: lightgray;
 }
 
-.buttonTwo {
+.buttonTwo,
+.buttonTwo:disabled {
     background: rgb(200, 200, 200);
 }
 
-.buttonThree {
+.buttonThree,
+.buttonThree:disabled {
     background: rgb(190, 190, 190);
 }
 
-.buttonFour {
+.buttonFour,
+.buttonFour:disabled {
     background: rgb(180, 180, 180);
 }
 
-.buttonFive {
+.buttonFive,
+.buttonFive:disabled {
     background: rgb(170, 170, 170);
 }
 
-.buttonSix {
+.buttonSix,
+.buttonSix:disabled {
     background: rgb(160, 160, 160);
 }
 
-.buttonSeven {
+.buttonSeven,
+.buttonSeven:disabled {
     background: rgb(150, 150, 150);
 }
 
-.buttonEight {
+.buttonEight,
+.buttonEight:disabled {
     background: rgb(140, 140, 140);
 }
 
-.buttonNine {
+.buttonNine,
+.buttonNine:disabled {
     background: rgb(130, 130, 130);
 }
 
